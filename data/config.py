@@ -1,6 +1,7 @@
 import datetime
 import os
 from dotenv import load_dotenv
+import json
 load_dotenv()
 BOT_TOKEN = str(os.getenv("BOT_TOKEN"))
 
@@ -8,7 +9,10 @@ BOT_TOKEN = str(os.getenv("BOT_TOKEN"))
 #    902545686
 admins = [
     465989596,
+    902545686
 ]
+
+mail_list = json.loads(os.getenv("MAIL_LIST"))
 
 def get_access_list():
     with open('access.txt', 'r') as file:
