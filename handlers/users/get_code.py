@@ -148,12 +148,6 @@ def genmarkup():
     return markup
 
 
-def refresh_markup(account):
-    markup = InlineKeyboardMarkup()
-    markup.row_width = 1
-    markup.add(InlineKeyboardButton(text=f'♻️ Обновить', callback_data=f'get_code_{account.login}'))
-    return markup
-
 
 def get_mail_list():
     accounts = []
